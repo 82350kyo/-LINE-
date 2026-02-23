@@ -32,15 +32,18 @@
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             margin: 0 auto 20px;
-            background: #06C755;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #06C755;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         h1 {
@@ -142,14 +145,14 @@
             width: 200px;
             height: 200px;
             margin: 0 auto;
-            background: #f0f0f0;
             border-radius: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #999;
-            font-size: 12px;
-            border: 2px dashed #ddd;
+            overflow: hidden;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .note {
@@ -177,7 +180,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo">📱</div>
+        <div class="logo">
+            <img src="images/profile.jpg" alt="プロフィール写真">
+        </div>
 
         <h1>公式LINEに登録する</h1>
         <p class="subtitle">お得な情報やキャンペーン情報を<br>いち早くお届けします</p>
@@ -210,7 +215,7 @@
         <div class="qr-section">
             <div class="qr-title">または QRコードを読み取る</div>
             <div class="qr-code">
-                QRコードを<br>ここに配置
+                <img src="images/qr-code.jpg" alt="LINE QRコード">
             </div>
             <p class="note">
                 ※ LINEアプリの「ホーム」タブ →「友だち追加」→「QRコード」から読み取れます
