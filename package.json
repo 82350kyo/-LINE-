@@ -1,0 +1,12 @@
+{
+  "name": "line-registration",
+  "version": "1.0.0",
+  "description": "LINE Official Account Registration Page",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve"
+  },
+  "keywords": ["line", "registration"],
+  "author": "",
+  "license": "MIT"
+}

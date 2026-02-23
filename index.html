@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公式LINE 友だち登録</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+            background: linear-gradient(135deg, #06C755 0%, #00B900 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: #06C755;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .benefits h2 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .benefit-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .benefit-icon {
+            width: 24px;
+            height: 24px;
+            background: #06C755;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+            color: white;
+            font-size: 14px;
+        }
+
+        .register-button {
+            background: #06C755;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .register-button:hover {
+            background: #05B34A;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
+        }
+
+        .register-button:active {
+            transform: translateY(0);
+        }
+
+        .qr-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .qr-title {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background: #f0f0f0;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            font-size: 12px;
+            border: 2px dashed #ddd;
+        }
+
+        .note {
+            margin-top: 20px;
+            color: #999;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .register-button {
+                font-size: 16px;
+                padding: 16px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📱</div>
+
+        <h1>公式LINEに登録する</h1>
+        <p class="subtitle">お得な情報やキャンペーン情報を<br>いち早くお届けします</p>
+
+        <div class="benefits">
+            <h2>登録するとできること</h2>
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>最新情報をいち早く受け取れます</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>限定クーポンやキャンペーン情報</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>お問い合わせがLINEで簡単に</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>24時間いつでもメッセージ可能</div>
+            </div>
+        </div>
+
+        <a href="#" class="register-button" id="registerBtn">
+            <span>友だち追加する</span>
+            <span>→</span>
+        </a>
+
+        <div class="qr-section">
+            <div class="qr-title">または QRコードを読み取る</div>
+            <div class="qr-code">
+                QRコードを<br>ここに配置
+            </div>
+            <p class="note">
+                ※ LINEアプリの「ホーム」タブ →「友だち追加」→「QRコード」から読み取れます
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // LINE公式アカウントのURLを設定してください
+        const LINE_OFFICIAL_URL = 'https://line.me/R/ti/p/@YOUR_LINE_ID';
+
+        document.getElementById('registerBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // モバイルデバイスの場合はLINEアプリで開く
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                window.location.href = LINE_OFFICIAL_URL;
+            } else {
+                // PCの場合は新しいタブで開く
+                window.open(LINE_OFFICIAL_URL, '_blank');
+            }
+        });
+    </script>
+</body>
+</html>
