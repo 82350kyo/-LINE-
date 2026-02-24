@@ -162,6 +162,129 @@
             line-height: 1.6;
         }
 
+        .search-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .search-title {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .line-id-box {
+            background: #f8f8f8;
+            border: 2px dashed #06C755;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .line-id {
+            font-size: 20px;
+            font-weight: bold;
+            color: #06C755;
+            font-family: monospace;
+        }
+
+        .copy-button {
+            background: #06C755;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .copy-button:hover {
+            background: #05B34A;
+        }
+
+        .copy-button.copied {
+            background: #666;
+        }
+
+        .how-to-section {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .how-to-section h3 {
+            color: #333;
+            font-size: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            background: #06C755;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .divider {
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 1px;
+            background: #eee;
+        }
+
+        .divider span {
+            background: white;
+            padding: 0 15px;
+            color: #999;
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
         @media (max-width: 480px) {
             .container {
                 padding: 30px 20px;
@@ -208,21 +331,80 @@
             <span>→</span>
         </a>
 
+        <div class="divider">
+            <span>または</span>
+        </div>
+
+        <div class="search-section">
+            <div class="search-title">LINE ID で検索</div>
+            <div class="line-id-box">
+                <span class="line-id">@815dbzgl</span>
+                <button class="copy-button" id="copyBtn">コピー</button>
+            </div>
+
+            <div class="how-to-section">
+                <h3>📱 ID検索で追加する方法</h3>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">LINEアプリの<strong>「ホーム」</strong>タブを開く</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">上部の<strong>検索バー</strong>をタップ</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">「<strong>@815dbzgl</strong>」を入力（上の「コピー」ボタンでコピーできます）</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">表示されたアカウントをタップして<strong>「追加」</strong>をタップ</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider">
+            <span>または</span>
+        </div>
+
         <div class="qr-section">
-            <div class="qr-title">または QRコードを読み取る</div>
+            <div class="qr-title">QRコードを読み取る</div>
             <div class="qr-code">
                 <img src="images/qr-code.jpg" alt="LINE QRコード">
             </div>
-            <p class="note">
-                ※ LINEアプリの「ホーム」タブ →「友だち追加」→「QRコード」から読み取れます
-            </p>
+
+            <div class="how-to-section">
+                <h3>📷 QRコードで追加する方法</h3>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">LINEアプリの<strong>「ホーム」</strong>タブを開く</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">右上の<strong>「友だち追加」</strong>ボタン（+マーク）をタップ</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content"><strong>「QRコード」</strong>をタップ</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">カメラが起動したら、上のQRコードを読み取る</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">表示されたアカウントの<strong>「追加」</strong>をタップ</div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
         // LINE公式アカウントのURL
         const LINE_OFFICIAL_URL = 'https://line.me/R/ti/p/@815dbzgl';
+        const LINE_ID = '@815dbzgl';
 
+        // 友だち追加ボタン
         document.getElementById('registerBtn').addEventListener('click', function(e) {
             e.preventDefault();
 
@@ -235,6 +417,27 @@
                 // PCの場合は新しいタブで開く
                 window.open(LINE_OFFICIAL_URL, '_blank');
             }
+        });
+
+        // LINE IDコピーボタン
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            // クリップボードにコピー
+            navigator.clipboard.writeText(LINE_ID).then(function() {
+                // ボタンのテキストを変更
+                const btn = document.getElementById('copyBtn');
+                const originalText = btn.textContent;
+                btn.textContent = 'コピーしました！';
+                btn.classList.add('copied');
+
+                // 2秒後に元に戻す
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('コピーに失敗しました:', err);
+                alert('コピーに失敗しました。手動でコピーしてください。');
+            });
         });
     </script>
 </body>
